@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>💀 Doxed 💀</title>
+    <title>Truth.</title>
 
     <!-- Open Graph Tags -->
     <meta property="og:title" content="Its Joeover.">
@@ -23,276 +23,54 @@
     <meta name="description" content="Its Joeover.">
 
     <style>
-        body, html {
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
             margin: 0;
             padding: 0;
-            height: 100%;
-            overflow: hidden;
-            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
         }
-        #video-background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: -1;
-        }
-        #info-container {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+        .container {
             text-align: center;
-            color: white;
-            background: rgba(0, 0, 0, 0.4);
-            padding: 20px;
-            border-radius: 10px;
-            max-width: 90%;
-            width: 400px;
-            opacity: 1;
-            transition: opacity 1s ease-in-out;
-            box-sizing: border-box;
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        .info-line {
-            opacity: 0;
-            transition: opacity 0.5s ease-in;
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
         }
-        .fade-in {
-            opacity: 1;
-        }
-        .fade-out {
-            opacity: 0;
-        }
-        #final-message {
-            display: none;
-            text-align: center;
-            color: white;
-            font-size: 24px;
-            background: rgba(0, 0, 0, 0.4);
-            padding: 20px;
-            border-radius: 10px;
-            max-width: 90%;
-            width: 400px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            box-sizing: border-box;
-        }
-        #final-message a {
-            color: #00f;
+        .btn {
+            font-size: 18px;
+            color: #ffffff;
+            background-color: #a0978d ;
+            padding: 12px 24px;
             text-decoration: none;
-            font-size: 20px;
-            display: block;
-            margin-top: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
         }
-        #final-message img {
+        .btn:hover {
+            background-color: #807870;
+        }
+        img {
             max-width: 100%;
-            max-height: 50%; /* Prevent the logo from being too tall */
             height: auto;
-            display: block;
-            margin: 10px auto;
-            object-fit: contain; /* Ensures the logo scales down properly while maintaining aspect ratio */
-            padding-top: 10px; /* Adds some padding to avoid sticking out of the container */
-            box-sizing: border-box;
-        }
-
-
-        /* Responsive design */
-        @media only screen and (max-width: 600px) {
-            #info-container, #final-message {
-                width: 90%;
-                font-size: 16px;
-            }
-            #final-message {
-                font-size: 20px;
-            }
-            #final-message a {
-                font-size: 16px;
-            }
-            #final-message img {
-              max-width: 70%; /* Adjust the size further for smaller screens if needed */
-            }
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
 <body>
-    <video id="video-background" autoplay loop>
-        <source src="meme.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    <div id="info-container">
-        <p class="info-line"><strong>Current Time:</strong> <span id="current-time">Loading...</span></p>
-        <p class="info-line"><strong>IP Address:</strong> <span id="ip-address">Loading...</span></p>
-        <p class="info-line"><strong>ISP:</strong> <span id="isp">Loading...</span></p>
-        <p class="info-line"><strong>ZIP Code:</strong> <span id="zip-code">Loading...</span></p>
-        <p class="info-line"><strong>General Location:</strong> <span id="location">Loading...</span></p>
-        <p class="info-line"><strong>Latitude:</strong> <span id="latitude">Loading...</span></p>
-        <p class="info-line"><strong>Longitude:</strong> <span id="longitude">Loading...</span></p>
-        <p class="info-line"><strong>Screen Size:</strong> <span id="screen-size">Loading...</span></p>
-        <p class="info-line"><strong>GPU:</strong> <span id="gpu-info">Loading...</span></p>
-        <p class="info-line"><strong>GPU Vendor:</strong> <span id="gpu-vendor">Loading...</span></p>
-        <p class="info-line"><strong>CPU Threads:</strong> <span id="cpu-threads">Loading...</span></p>
-        <p class="info-line"><strong>Device Type:</strong> <span id="device-type">Loading...</span></p>
-        <p class="info-line"><strong>Browser:</strong> <span id="browser-info">Loading...</span></p>
-        <p class="info-line"><strong>Browser Version:</strong> <span id="browser-version">Loading...</span></p>
-        <p class="info-line"><strong>Language:</strong> <span id="language-info">Loading...</span></p>
-        <p class="info-line"><strong>Cookies Enabled:</strong> <span id="cookies-enabled">Loading...</span></p>
-        <p class="info-line"><strong>Timezone:</strong> <span id="timezone-info">Loading...</span></p>
+    <div class="container">
+        <h1>Click here for the truth.</h1>
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.foxnews.com%2Ffoxnews.com%2Fcontent%2Fuploads%2F2022%2F06%2Fbiden-sad-frown.jpg&f=1&nofb=1&ipt=d827499605e2ed465c84b2f1bc9d7bab3cac270d00ad4840a49c3a8dd0bf225e&ipo=images" alt="Image">
+        <a href="real.html" class="btn">Go</a>
     </div>
-
-    <div id="final-message">
-        <h1 class="code-line" data-line-start=0 data-line-end=1 ><a id="Get_Doxed_Lmao_0"></a>Get Doxed 💀</h1>
-        <img src="logo.svg" alt="logo">
-        <a href="privacypolicy.html">
-            <p style="color: rgba(0, 0, 255, 0.8); font-size: 10px;"><strong>PRIVACY POLICY</strong></p>
-        </a>
-    </div>
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        // API key and data fetch (found the key on stackoverflow lamo)
-        let apiKey = 'd9e53816d07345139c58d0ea733e3870';
-        $.getJSON('https://api.bigdatacloud.net/data/ip-geolocation?key=' + apiKey, function(data) {
-            document.getElementById('ip-address').textContent = data.ip;
-            document.getElementById('isp').textContent = data.network.organisation;
-            document.getElementById('zip-code').textContent = data.location.postcode || 'N/A';
-            document.getElementById('location').textContent = `${data.location.city}, ${data.location.principalSubdivision}`;
-            document.getElementById('latitude').textContent = data.location.latitude;
-            document.getElementById('longitude').textContent = data.location.longitude;
-        });
-
-        // Display screen size
-        function displayScreenSize() {
-            const width = window.innerWidth;
-            const height = window.innerHeight;
-            document.getElementById('screen-size').textContent = `${width} x ${height}`;
-        }
-
-        // Detect GPU and Vendor information
-        function detectGPU() {
-            const canvas = document.createElement('canvas');
-            const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
-            let gpuInfo = 'Unknown';
-            let gpuVendor = 'Unknown';
-
-            if (gl && gl.getParameter) {
-                const debugInfo = gl.getExtension('WEBGL_debug_renderer_info');
-                if (debugInfo) {
-                    gpuVendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);
-                    const renderer = gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL);
-                    gpuInfo = `${renderer}`;
-                } else {
-                    gpuInfo = gl.getParameter(gl.VERSION);
-                }
-            }
-
-            document.getElementById('gpu-info').textContent = gpuInfo;
-            document.getElementById('gpu-vendor').textContent = gpuVendor;
-        }
-
-        // Detect CPU Threads
-        function detectCPUThreads() {
-            const cpuThreads = navigator.hardwareConcurrency || 'Unknown';
-            document.getElementById('cpu-threads').textContent = cpuThreads;
-        }
-
-        // Detect Device Type (Mobile/Tablet/Desktop)
-        function detectDeviceType() {
-            const ua = navigator.userAgent;
-            let deviceType = 'Desktop';
-
-            if (/Mobi|Android/i.test(ua)) {
-                deviceType = 'Mobile';
-            } else if (/Tablet|iPad/i.test(ua)) {
-                deviceType = 'Tablet';
-            }
-
-            document.getElementById('device-type').textContent = deviceType;
-        }
-
-        // Detect Browser and Version
-        function detectBrowser() {
-            const ua = navigator.userAgent;
-            let browserName = 'Unknown';
-            let browserVersion = 'Unknown';
-
-            if (ua.indexOf('Firefox') > -1) {
-                browserName = 'Mozilla Firefox';
-                browserVersion = ua.match(/Firefox\/([0-9.]+)/)[1];
-            } else if (ua.indexOf('Chrome') > -1) {
-                browserName = 'Google Chrome';
-                browserVersion = ua.match(/Chrome\/([0-9.]+)/)[1];
-            } else if (ua.indexOf('Safari') > -1) {
-                browserName = 'Apple Safari';
-                browserVersion = ua.match(/Version\/([0-9.]+)/)[1];
-            } else if (ua.indexOf('MSIE') > -1 || ua.indexOf('Trident/') > -1) {
-                browserName = 'Internet Explorer';
-                browserVersion = ua.match(/(MSIE |rv:)([0-9.]+)/)[2];
-            } else if (ua.indexOf('Edge') > -1) {
-                browserName = 'Microsoft Edge';
-                browserVersion = ua.match(/Edge\/([0-9.]+)/)[1];
-            }
-
-            document.getElementById('browser-info').textContent = browserName;
-            document.getElementById('browser-version').textContent = browserVersion;
-        }
-
-        // Display current time
-        function displayCurrentTime() {
-            const now = new Date();
-            document.getElementById('current-time').textContent = now.toLocaleTimeString();
-        }
-
-        // Detect other browser information
-        function displayBrowserInfo() {
-            document.getElementById('language-info').textContent = navigator.language;
-            document.getElementById('cookies-enabled').textContent = navigator.cookieEnabled ? "Yes" : "No";
-            document.getElementById('timezone-info').textContent = Intl.DateTimeFormat().resolvedOptions().timeZone;
-        }
-
-        // Animate information appearance
-        function animateInfoLines() {
-            const lines = document.querySelectorAll('.info-line');
-            lines.forEach((line, index) => {
-                setTimeout(() => {
-                    line.classList.add('fade-in');
-                }, index * 400); // 0.4 seconds between each line
-            });
-
-            // Fade out all information after 15 seconds of the last line being shown
-            setTimeout(() => {
-                document.getElementById('info-container').classList.add('fade-out');
-                setTimeout(() => {
-                    document.getElementById('info-container').style.display = 'none';
-                    showFinalMessage();
-                }, 1000); // Wait for fade out to complete
-            }, (lines.length * 400) + 5000); // 15 seconds after the last line appears
-        }
-
-        // Show final message
-        function showFinalMessage() {
-            document.getElementById('final-message').style.display = 'block';
-        }
-
-        // Run functions on page load
-        window.onload = function() {
-            displayCurrentTime();
-            displayScreenSize();
-            detectGPU();
-            detectCPUThreads();
-            detectDeviceType();
-            detectBrowser();
-            displayBrowserInfo();
-
-            // Update the current time every second
-            setInterval(displayCurrentTime, 1000);
-
-            // Animate the info lines
-            animateInfoLines();
-        };
-    </script>
 </body>
 </html>
