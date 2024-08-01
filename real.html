@@ -38,6 +38,7 @@
             height: 100%;
             object-fit: cover;
             z-index: -1;
+            display: none; /* Hide video initially */
         }
         #info-container {
             position: absolute;
@@ -99,7 +100,6 @@
             box-sizing: border-box;
         }
 
-
         /* Responsive design */
         @media only screen and (max-width: 600px) {
             #info-container, #final-message {
@@ -113,13 +113,13 @@
                 font-size: 16px;
             }
             #final-message img {
-              max-width: 70%; /* Adjust the size further for smaller screens if needed */
+                max-width: 70%; /* Adjust the size further for smaller screens if needed */
             }
         }
     </style>
 </head>
 <body>
-    <video id="video-background" preload="auto" muted controls>
+    <video id="video-background" preload="auto" muted>
         <source src="meme.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
@@ -287,9 +287,13 @@
             detectBrowser();
             displayBrowserInfo();
 
+            const urlParams = new URLSearchParams(window.location.search);
+            const video = document.getElementById('video-background');
+
             // If unmute parameter is present, unmute and play the video
             if (urlParams.get('unmute') === 'true') {
                 video.muted = false;
+                video.style.display = 'block'; // Show the video
                 video.play();
             }
 
