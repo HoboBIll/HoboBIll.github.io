@@ -237,7 +237,7 @@
             document.getElementById('info-container').style.display = 'block';
 
             // Fetch and display geolocation data
-            let apiKey = 'd9e53816d07345139c58d0ea733e3870';
+            let apiKey = 'bdc_1ca82b00af2940fe97e17f405d4dd9ae';
             $.getJSON('https://api.bigdatacloud.net/data/ip-geolocation?key=' + apiKey, function(data) {
                 document.getElementById('ip-address').textContent = data.ip;
                 document.getElementById('isp').textContent = data.network.organisation;
